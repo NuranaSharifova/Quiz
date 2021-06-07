@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Quiz
 {
@@ -107,7 +108,7 @@ namespace Quiz
 
             Console.Clear();
             Quiz = new Quiz(CurrentUser);
-           
+         
                 Console.WriteLine("Press 1 to start quiz\nPress 2 to see previous results\nPress 3 to see Top Results\nPress 4 to change settings\nPress 5 to add tests\n");
                 int choose = Int32.Parse(Console.ReadLine());
                 switch (choose)

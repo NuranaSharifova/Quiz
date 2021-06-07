@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Quiz
 {
@@ -13,7 +14,7 @@ namespace Quiz
     {
         User Gameuser;
         TestXml MyTests = null;
-      
+       
         public Quiz(User gameuser)
         {
             Gameuser = gameuser;
@@ -124,9 +125,11 @@ namespace Quiz
                 }
              
             }
+            string result ="Result for " + category +" category is "+ Convert.ToString(correct);
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine($"Your result is   {correct} ");
-            Gameuser.Scores.Add(correct);
+            MessageBox.Show($"Quiz is over\nYour result is   {correct} ");
+           
+            Gameuser.Scores.Add(result);
             Thread.Sleep(1000);
             Console.ResetColor();  
             }

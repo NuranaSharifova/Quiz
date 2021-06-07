@@ -14,7 +14,7 @@ namespace Quiz
         public string Login { get; set; }
         public string Password { get; set; }
         public DateTime Birthday { get; set; }
-        public List<int> Scores{ get; set ; }
+        public List<string> Scores{ get; set ; }
 
         public void Register()  
         {
@@ -66,7 +66,7 @@ namespace Quiz
             foreach (var item in Scores)
             {
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;           
-                Console.WriteLine($"{count + 1}________{item}");
+                Console.WriteLine($"{count + 1}.{item}");
                 Console.ResetColor();
             }
 
